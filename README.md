@@ -1,6 +1,6 @@
 # Cinebuzzz - Book Movie Tickets
 
-![Kwizie Logo](https://cinebuzzz.netlify.app/logo1.png)
+<img src="https://cinebuzzz.netlify.app/logo1.png" alt="Cinebuzzz Logo" width="200"/>
 
 ## Deployment URL
 
