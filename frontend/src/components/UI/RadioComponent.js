@@ -1,24 +1,22 @@
 import React from "react";
-import "../styles/radioComponent.css";
-
+import "../styles/radioComponent.css"; // Importing CSS for styling
 
 const RadioComponent = ({ text, changeSelection, data }) => {
-  // this will handle radio button selection
+  // Function to handle radio button selection
   const handleChecked = (value) => {
-    changeSelection(value);
+    changeSelection(value); // Calls the changeSelection function passed from parent component
   };
 
   return (
     <div
-      name={text}
-      // apply the 'active' class if the radio button is selected (i.e., data is equal to the text)
+      name={text} // Setting name attribute based on text prop
+      // Applying conditional class based on whether data equals text (for active/inactive state)
       className={`form-check-label ${data === text ? "active" : "inactive"}`}
       onClick={() => {
-        // call the handleChecked function with the selected value
-        handleChecked(text);
+        handleChecked(text); // Calls handleChecked function with selected value on click
       }}
     >
-      <span className={"text"}>{text}</span>
+      <span className={"text"}>{text}</span> {/* Displays the text label */}
     </div>
   );
 };

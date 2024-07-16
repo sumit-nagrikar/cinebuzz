@@ -1,22 +1,24 @@
-//This data I am using to send a post req on backend server for book a ticket
-
+// List of movies available for booking
 let moviesList = [
-    "Suraj par mangal bhari",
-    "Tenet",
-    "The war with grandpa",
-    "The Witches",
-    "The Craft: Legacy",
-    "The Informer",
-    "The SpongeBob Movie: Sponge on the Run",
-    "The Croods: A New Age",
-    "The Comeback Trail",
-    "The Night House",
-  ];
+  "Suraj par mangal bhari",
+  "Tenet",
+  "The war with grandpa",
+  "The Witches",
+  "The Craft: Legacy",
+  "The Informer",
+  "The SpongeBob Movie: Sponge on the Run",
+  "The Croods: A New Age",
+  "The Comeback Trail",
+  "The Night House",
+];
 
-  let slots = ["10:00 AM", "01:00 PM", "03:00 PM", "08:00 PM"];
+// Time slots available for movie screenings
+let slots = ["10:00 AM", "01:00 PM", "03:00 PM", "08:00 PM"];
 
-  let seats = ["A1", "A2", "A3", "A4", "D1", "D2"];
+// Available seat options for booking
+let seats = ["A1", "A2", "A3", "A4", "D1", "D2"];
 
-  exports.moviesList = moviesList;
-  exports.slots = slots;
-  exports.seats = seats;
+// Exporting the data arrays for use in other modules
+exports.moviesList = moviesList;
+exports.slots = slots;
+exports.seats = seats;

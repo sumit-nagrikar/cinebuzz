@@ -1,34 +1,31 @@
 import React, { useContext } from "react";
-import BsContext from "../../context/Context";
-import "../styles/errorModel.css";
+import BsContext from "../../context/Context"; // Importing context
+import "../styles/errorModel.css"; // Importing CSS for styling
 
 function Model(props) {
-  // here we are getting error and the functions from context
-  const context = useContext(BsContext);
-  const { errorPopup, errorMessage, setErrorPopup, setErrorMessage } = context;
+  const context = useContext(BsContext); // Getting context data
+  const { errorPopup, errorMessage, setErrorPopup, setErrorMessage } = context; // Destructuring context values
 
-  // this is the function for closing error modal
+  // Function to close the error modal
   const handleClosePopup = () => {
-    setErrorMessage("");
-    setErrorPopup(false);
+    setErrorMessage(""); // Clear error message
+    setErrorPopup(false); // Set error popup to false to hide modal
   };
-  // rendering the error model
+
+  // Rendering the error modal
   return (
     <>
-      {errorPopup && (
-        <div
-          className={`modal-container ${errorPopup ? "active" : "inactive"}`}
-        >
+      {errorPopup && ( // Conditionally render modal if errorPopup is true
+        <div className={`modal-container ${errorPopup ? "active" : "inactive"}`}>
           <div className="modal">
             <div className="modal-header">
-              <strong>Message</strong>
+              <strong>Message</strong> {/* Header with 'Message' text */}
             </div>
             <div className="modal-body">
-              {/* the error message will display */}
-              <span>{errorMessage}</span>
+              <span>{errorMessage}</span> {/* Display error message */}
             </div>
             <div className="modal-footer">
-              <button onClick={handleClosePopup}>Close</button>
+              <button onClick={handleClosePopup}>Close</button> {/* Close button */}
             </div>
           </div>
         </div>
