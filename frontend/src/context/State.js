@@ -20,7 +20,7 @@ const BsState = (props) => {
   const handlePostBooking = async () => {
     try {
       const response = await axios.post(`https://cinebuzz-of1h.onrender.com/api/booking`, {
-        movie: movie,
+        movie: movie,      //Use here localhost url for running on local instead of this "https://cinebuzz-of1h.onrender.com"
         slot: time,
         seats: noOfSeat,
       }, {
@@ -58,7 +58,7 @@ const BsState = (props) => {
   const handleGetLastBooking = async () => {
     try {
       const response = await axios.get(`https://cinebuzz-of1h.onrender.com/api/booking`);//add server api
-      const data = response.data;
+      const data = response.data; //Use here localhost url for running on local instead of this "https://cinebuzz-of1h.onrender.com"
       setLastBookingDetails(data.data);
     } catch (error) {
       setErrorPopup(false);
