@@ -1,7 +1,9 @@
 // List of movies available for booking
 let moviesList = [
+  "The Boys",
   "Suraj par mangal bhari",
   "Tenet",
+  "Smile",
   "The war with grandpa",
   "The Witches",
   "The Craft: Legacy",
