@@ -1,0 +1,51 @@
+Bookmyshow
+
+Frontend
+
+File name:index.js -- This is our main which will run our project
+Here we load .env file -requirred to load environment variables
+mongoDB connection method also we import here
+
+we need express - communication between backend and frontend
+It is used to manage server routing, request handling, and middleware.
+
+we wrote routes in another file and import them here in index.js
+
+and setup the routes here
+
+app.listen is imp to start the server to listen incoming requests
+
+file name: 
+routes.js-- routes working and navigation
+
+if any	request	comes from frontent
+api/booking it will handled here..
+
+here we imported the schema and working on that schema as written inside the routes definition
+
+
+connectToMongo.js
+import mongoose
+here we need mongoURI, .env include	port, mongoURI string
+
+for mongoURI-- userpass string
+Goto-->
+mongoDB Atlas-->create project with compass-->create clustor--> URI generated
+
+also in database access -- user is created
+
+Network access-- can include IPs to alow access.
+
+
+## request coming from frontend is handled through routes as --> any request coming on booking -- app is listening on that port number-- app listen to the request - give it to routes- routes handles it and send the data	
+
+we could also use postman for backend verification(working is not) instead of frontend.
+
+## Routes.js -working
+The router.use(express.json()) and router.use(express.urlencoded({ extended: false })) middlewares are used to ensure that the incoming request bodies are properly parsed into JavaScript objects, making it easier to handle data in the routes. The POST /booking route directly benefits from these middlewares as it reads the booking details from the request body. The GET /booking route does not currently utilize request body data, but the middlewares provide flexibility for future modifications.
+
+simple-- router.use(express.json()) parsing the json into javascript objects
+
+
+
+
