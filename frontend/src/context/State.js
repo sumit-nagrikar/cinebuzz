@@ -19,7 +19,7 @@ const BsState = (props) => {
 
   const handlePostBooking = async () => {
     try {
-      const response = await axios.post(`http://localhost:8000/api/booking`, {
+      const response = await axios.post(`https://cinebuzz-of1h.onrender.com/api/booking`, {
         movie: movie,
         slot: time,
         seats: noOfSeat,
@@ -57,7 +57,7 @@ const BsState = (props) => {
 
   const handleGetLastBooking = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/booking`);//add server api
+      const response = await axios.get(`https://cinebuzz-of1h.onrender.com/api/booking`);//add server api
       const data = response.data;
       setLastBookingDetails(data.data);
     } catch (error) {

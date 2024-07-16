@@ -7,9 +7,9 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
 // Route to handle booking request
-router.post("/booking", async (req, res) => {//
+router.post("/booking", async (req, res) => {
   try {
-    const { movie, slot, seats } = req.body;
+    const { movie, slot, seats } = req.body; // Destructure the movie, slot, and seats from the request body
 
     // Creating a new instance of the booking schema with the provided data
     const newBooking = new Booking({ movie, slot, seats });

@@ -1,34 +1,25 @@
-
-
-
 require("dotenv").config(); // Load environment variables
 
+const express = require("express"); 
+const cors = require("cors"); // Middleware to enable Cross-Origin Resource Sharing
+// const bodyParser = require("body-parser");// Body-parser middleware (commented out)
+const connectToMongo = require("./db/connectToMongo.js"); // Import MongoDB connection function
+const bookingRoutes = require("./routes/routes.js"); // Import booking routes
 
-const express = require("express");//7, 15 to communicate backend with frontend 
-
-
-const cors = require("cors");//10, 21
-// const bodyParser = require("body-parser");//11,22,23
-const connectToMongo = require("./db/connectToMongo.js"); 
-
-const bookingRoutes = require("./routes/routes.js"); // Adjust the path accordingly
-
-const app = express();
-
-
+const app = express(); // Create an Express application
 
 // Middleware
-app.use(cors());
-// app.use(bodyParser.urlencoded());
-app.use(express.json());
+app.use(cors()); // Enable CORS
+// app.use(bodyParser.urlencoded()); // Use body-parser (commented out)
+app.use(express.json()); // Parse JSON request bodies
 
 // Routes
 app.use("/api", bookingRoutes); // Use the booking routes
 
 // Start the server
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000; // Set the server port from environment variables or default to 8000
 app.listen(PORT, () => {
   // Connect to MongoDB
-connectToMongo();
-  console.log(`Server is running on port ${PORT}`);
+  connectToMongo(); // Connect to MongoDB when the server starts
+  console.log(`Server is running on port ${PORT}`); // Log the server start message
 });
