@@ -13,12 +13,8 @@ async function connectToMongo() {
     //   throw new Error('Invalid MongoDB URI scheme. It should start with "mongodb://" or "mongodb+srv://".');
     // }
 
-    console.log('Connecting to MongoDB with URL:', dbUrl);
 
-    const client = await mongoose.connect(dbUrl, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const client = await mongoose.connect(dbUrl);
 
     console.log("Connected to MongoDB");
 
