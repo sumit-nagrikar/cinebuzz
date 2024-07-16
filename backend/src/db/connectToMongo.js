@@ -1,20 +1,32 @@
-/* In this file, we are connecting our database with our backend */
-require("dotenv").config(); // We will get environment variables from a .env file
 const mongoose = require("mongoose");
-mongoose.set("strictQuery", true);
+require('dotenv').config();
 
-// Retrieving the MongoDB connection URI from the environment variables
-const mongoURI = process.env.MONGODB_URL;
-
-// Function to connect to MongoDB using the Mongoose library
-const connectToMongo = async () => {
+async function connectToMongo() {
   try {
-    await mongoose.connect(mongoURI, { });
-    console.log("Connection established with MongoDB server online");
-  } catch (err) {
-    console.error("Error while connecting to MongoDB", err);
-  }
-};
+    const dbUrl = process.env.MONGODB_URI;
+    if (!dbUrl) {
+      throw new Error('MONGODB_URI is not defined. Please check your environment variables.');
+    }
 
-// Exporting the connectToMongo function
+    // Optional: Uncomment to check URI scheme
+    // if (!dbUrl.startsWith('mongodb://') && !dbUrl.startsWith('mongodb+srv://')) {
+    //   throw new Error('Invalid MongoDB URI scheme. It should start with "mongodb://" or "mongodb+srv://".');
+    // }
+
+    console.log('Connecting to MongoDB with URL:', dbUrl);
+
+    const client = await mongoose.connect(dbUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log("Connected to MongoDB");
+
+    return client;
+  } catch (error) {
+    console.error('Error connecting to the database:', error.message);
+    throw error;
+  }
+}
+
 module.exports = connectToMongo;
