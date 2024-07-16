@@ -9,7 +9,7 @@ const express = require("express");//7, 15 to communicate backend with frontend
 
 const cors = require("cors");//10, 21
 const bodyParser = require("body-parser");//11,22,23
-const connectToMongo = require("./db/connectToMongo.js"); // 12,18
+const connectToMongo = require("./db/connectToMongo.js"); 
 
 const bookingRoutes = require("./routes/routes.js"); // Adjust the path accordingly
 
@@ -20,7 +20,7 @@ connectToMongo();
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded());
 app.use(express.json());
 
 // Routes
