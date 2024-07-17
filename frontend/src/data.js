@@ -1,18 +1,19 @@
-// List of movies available for booking
+//List of movies available from where we choosing movies
 let moviesList = [
-  "The Boys",
-  "Suraj par mangal bhari",
-  "Tenet",
-  "Smile",
-  "The war with grandpa",
-  "The Witches",
-  "The Craft: Legacy",
-  "The Informer",
-  "The SpongeBob Movie: Sponge on the Run",
-  "The Croods: A New Age",
-  "The Comeback Trail",
-  "The Night House",
+  "Inception",
+  "Parasite",
+  "Interstellar",
+  "Joker",
+  "Avengers: Endgame",
+  "Toy Story 4",
+  "Once Upon a Time in Hollywood",
+  "1917",
+  "Ford v Ferrari",
+  "The Irishman",
+  "Jojo Rabbit",
+  "Little Women"
 ];
+
 
 // Time slots available for movie screenings
 let slots = ["10:00 AM", "01:00 PM", "03:00 PM", "08:00 PM"];
