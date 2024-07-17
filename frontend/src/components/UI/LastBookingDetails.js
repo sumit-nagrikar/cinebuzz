@@ -12,7 +12,7 @@ const LastBookingDetails = (props) => {
   useEffect(() => {
     // useEffect hook to fetch the details of the last booking when component mounts
     handleGetLastBooking();
-  },[]); // Empty dependency array ensures useEffect runs only once on mount
+  }); // Empty dependency array ensures useEffect runs only once on mount
 
   return (
     <div className="last_booking_details_container_main">
