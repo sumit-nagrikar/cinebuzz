@@ -92,9 +92,9 @@ Explore the API endpoints and understand how to interact with the cinebuzzz back
 - **Email:** sumitnagrikar1@gmail.com
 
 - **Name:** Piyush Pakmode
-- **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
-- **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
-- **Email:** sumitnagrikar1@gmail.com
+- **GitHub:** [https://github.com/Piyush0924](https://github.com/Piyush0924)
+- **LinkedIn:** [https://www.linkedin.com/in/piyush-pakmode-12b252ab/](https://www.linkedin.com/in/piyush-pakmode-12b252ab/)
+- **Email:** pakmodepiyush0924@gmail.com
 
 ## License
 
