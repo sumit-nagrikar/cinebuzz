@@ -84,17 +84,17 @@ Explore the API endpoints and understand how to interact with the cinebuzzz back
 
 - **Postman Documentation:** [https://documenter.getpostman.com/view/36361121/2sA3kRJP1S](https://documenter.getpostman.com/view/36361121/2sA3kRJP1S)
 
-## Developer
+## Developers
 
 - **Name:** Sumit Nagrikar
 - **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
 - **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
 - **Email:** sumitnagrikar1@gmail.com
-
+----------------------------------------------
 - **Name:** Piyush Pakmode
-- **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
-- **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
-- **Email:** sumitnagrikar1@gmail.com
+- **GitHub:** [https://github.com/Piyush0924](https://github.com/Piyush0924)
+- **LinkedIn:** [https://www.linkedin.com/in/piyush-pakmode-12b252ab/](https://www.linkedin.com/in/piyush-pakmode-12b252ab/)
+- **Email:** pakmodepiyush0924@gmail.com
 
 ## License
 
